@@ -1,0 +1,90 @@
+﻿生成启动时间为 2014/3/3 PM 10:31:46。
+     1>项目“D:\360\ZJU\project\cuda\cudatest\g;_bitmap\g;_bitmap.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Debug\g;_bitmap.unsuccessfulbuild”执行 Touch 任务。
+       AddCudaCompileDeps:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /D_DEBUG /D_CONSOLE /D_UNICODE /DUNICODE /IC:\cuda\cudatoolkit\include /IC:\cuda\cudatoolkit\bin /IC:\cuda\cudatoolkit\include /I. /FIcuda_runtime.h /c D:\360\ZJU\project\cuda\cudatest\g;_bitmap\gl_bitmap.cu 
+       AddCudaCompilePropsDeps:
+       正在跳过目标“AddCudaCompilePropsDeps”，因为所有输出文件相对于输入文件而言都是最新的。
+       CudaBuild:
+         Compiling CUDA source file ..\g;_bitmap\gl_bitmap.cu...
+         cmd.exe /C "C:\Users\Administrator\AppData\Local\Temp\tmp62627b6eb3b948ef9f7d90b8bc0b695d.cmd"
+         "C:\cuda\cudatoolkit\bin\nvcc.exe" -gencode=arch=compute_10,code=\"sm_10,compute_10\" --use-local-env --cl-version 2010 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -IC:\cuda\cudatoolkit\include -IC:\cuda\cudatoolkit\include  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o Debug\gl_bitmap.cu.obj "D:\360\ZJU\project\cuda\cudatest\g;_bitmap\gl_bitmap.cu"
+         
+         D:\360\ZJU\project\cuda\cudatest\g;_bitmap>"C:\cuda\cudatoolkit\bin\nvcc.exe" -gencode=arch=compute_10,code=\"sm_10,compute_10\" --use-local-env --cl-version 2010 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -IC:\cuda\cudatoolkit\include -IC:\cuda\cudatoolkit\include  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o Debug\gl_bitmap.cu.obj "D:\360\ZJU\project\cuda\cudatest\g;_bitmap\gl_bitmap.cu" 
+     1>c:\cuda\cudatoolkit\include\math_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(870): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(1846): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(2747): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(3698): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(4610): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(5501): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(6407): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(7316): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\device_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\device_functions.h(783): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\device_functions.h(1659): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\sm_13_double_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(870): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(1846): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(2747): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(3698): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(4610): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(5501): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(6407): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(7316): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(870): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(1846): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(2747): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(3698): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(4610): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(5501): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(6407): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(7316): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\device_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\device_functions.h(783): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\device_functions.h(1659): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\sm_13_double_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(870): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(1846): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(2747): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(3698): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(4610): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(5501): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(6407): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(7316): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\device_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\device_functions.h(783): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\device_functions.h(1659): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\sm_13_double_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(870): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(1846): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(2747): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(3698): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(4610): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(5501): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(6407): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>c:\cuda\cudatoolkit\include\math_functions.h(7316): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+       ManifestResourceCompile:
+         所有输出均为最新。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\360\ZJU\project\cuda\cudatest\Debug\g;_bitmap.exe" /INCREMENTAL /NOLOGO /LIBPATH:"($CUDA_PATH_V5_5)\lib\($Platform)" /LIBPATH:C:\cuda\cudatoolkit\lib\Win32 cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\g;_bitmap.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\360\ZJU\project\cuda\cudatest\Debug\g;_bitmap.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\360\ZJU\project\cuda\cudatest\Debug\g;_bitmap.lib" /MACHINE:X86 Debug\gl_bitmap.cu.obj
+         "Debug\g;_bitmap.exe.embed.manifest.res"
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\g;_bitmap.exe.embed.manifest" /manifest "Debug\g;_bitmap.exe.intermediate.manifest"
+         所有输出均为最新。
+       LinkEmbedManifest:
+         所有输出均为最新。
+         g;_bitmap.vcxproj -> D:\360\ZJU\project\cuda\cudatest\Debug\g;_bitmap.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\g;_bitmap.unsuccessfulbuild”。
+         正在对“Debug\g;_bitmap.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\360\ZJU\project\cuda\cudatest\g;_bitmap\g;_bitmap.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:07.28
