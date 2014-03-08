@@ -142,8 +142,7 @@ int main(void)
   HANDLE_ERROR( cudaEventRecord( stop, 0 ) );
   HANDLE_ERROR( cudaEventSynchronize( stop ) );
   float   elapsedTime;
-  HANDLE_ERROR( cudaEventElapsedTime( &elapsedTime,
-    start, stop ) );
+  HANDLE_ERROR( cudaEventElapsedTime( &elapsedTime,start, stop ) );
   printf( "Time to hash:  %3.1f ms\n", elapsedTime );
   verifytable(table);
   freettable(table);

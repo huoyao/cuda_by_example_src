@@ -587,3 +587,5 @@ cudatest/ipch/hash_cpu-6d0cc095/hash_cpu-86ab1255.ipch
 cudatest/ipch/hash_gpu-b31c4f1d/hash_gpu-ba940559.ipch
 cudatest/ipch/temp_sim_tex2d-9c0e9aa7/temp_sim_tex2d-77909c90.ipch
 cudatest/juliaset/Debug/juliaset.cu.deps
+cudatest/cudatest.opensdf
+cudatest/cudatest.sdf
