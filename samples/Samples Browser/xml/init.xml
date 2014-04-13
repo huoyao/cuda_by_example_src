@@ -1,0 +1,20 @@
+<initEntry>
+<entry>
+    <search></search>
+    <keywords></keywords>
+    <computeChecked>true</computeChecked>
+    <minspec>0</minspec>
+    <specRange>0</specRange>
+    <minspecQuadro>False</minspecQuadro>
+    <scope>All</scope>
+    <computeTotal>113</computeTotal>
+    <computeAmount>113</computeAmount>
+    <computeScopeList>,2:Graphics Interop,2:Image Processing,2:Performance Strategies,1:CUDA Basic Topics,1:Performance Strategies,1:CUDA Advanced Topics,1:CUDA Systems Integration,2:Texture,1:Data-Parallel Algorithms,3:Volume Processing,3:Physically-Based Simulation,2:Data Compression,2:Video Codecs,2:Computer Vision,3:Linear Algebra,3:Computational Finance</computeScopeList>
+    <cudalibsTotal>19</cudalibsTotal>
+    <cudalibsAmount>19</cudalibsAmount>
+    <cudalibsScopeList>,1:CUDA Basic Topics,1:Performance Strategies,2:Computer Vision,3:Linear Algebra,1:CUDA Advanced Topics,3:Computational Finance,2:Image Processing,2:Data Compression</cudalibsScopeList>
+    <docsTotal>29</docsTotal>
+    <docsAmount>29</docsAmount>
+    <docsScopeList>,CUDA Documents,Getting Started,Programming Guide,Performance Guide,DirectCompute Documents,Profiling Tools,Release Notes</docsScopeList>
+</entry>
+</initEntry>

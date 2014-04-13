@@ -1,0 +1,1108 @@
+<entries>
+<entry>
+    <name>JPEG encode/decode and resize with NPP</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[This sample demonstrates a simple image processing pipline. First, a JPEG file is huffman decoded and inverse DCT transformed and dequantized. Then the different plances are resized. Finally, the resized image is quantized, forward DCT transformed and huffman encoded.]]></description>
+    <project_path>7_CUDALibraries\jpegNPP</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>bin\win32\release\jpegNPP.exe</executable>
+    <minspec>SM 2.0</minspec>
+    <keywords>CUDA,NPP,JPEG,Image Processing,Image Compression</keywords>
+    <scope>1:CUDA Basic Topics,1:Performance Strategies,2:Computer Vision</scope>
+    <featured_date>130226</featured_date>
+    <cudaapi>nppGetGpuComputeCapability</cudaapi>
+    <cudaapi>nppiDCTInitAlloc</cudaapi>
+    <cudaapi>nppiDecodeHuffmanScanHost_JPEG_8u16s_P3R</cudaapi>
+    <cudaapi>nppiDCTQuantInv8x8LS_JPEG_16s8u_C1R_NEW</cudaapi>
+    <cudaapi>nppiResizeSqrPixel_8u_C1R</cudaapi>
+    <cudaapi>nppiEncodeHuffmanGetSize</cudaapi>
+    <cudaapi>nppiDCTFree</cudaapi>
+
+    <files>
+        <file>..\..\common\data\Growth_of_cubic_bacteria_25x16.jpg</file>
+    </files>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+    <library>nppi</library>
+    <library>nppc</library>
+	<library>freeimage</library>
+
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows"></library-path>
+    <library-path os="linux" arch="x86_64">../common/FreeImage/lib/linux/x86_64</library-path>
+    <library-path os="linux" arch="i686">../common/FreeImage/lib/linux/i686</library-path>
+    <library-path os="macosx">../common/FreeImage/lib/darwin</library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+	<include-path>../common/UtilNPP/</include-path>
+	<include-path>../common/FreeImage/include </include-path>
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>jpegNPP.cpp</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>simpleDevLibCUBLAS GPU Device API Library Functions (CUDA Dynamic Parallelism)</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[This sample implements a simple CUBLAS function calls that call GPU device API library running CUBLAS functions.  This sample requires a SM 3.5 capable device.]]></description>
+    <project_path>7_CUDALibraries\simpleDevLibCUBLAS</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>Bin\win32\release\simpleDevLibCUBLAS.exe</executable>
+    <minspec>KEPLER SM 3.5</minspec>
+    <keywords>CUDA,CUBLAS,CDP</keywords>
+    <scope>1:CUDA Basic Topics,3:Linear Algebra</scope>
+    <featured_date>120813</featured_date>
+    <files>
+    </files>
+    <cudaapi>cublasCreate</cudaapi>
+    <cudaapi>cublasSetVector</cudaapi>
+    <cudaapi>cublasSgemm</cudaapi>
+    <cudaapi>cudaMalloc</cudaapi>
+    <cudaapi>cudaFree</cudaapi>
+    <cudaapi>cudaMemcpy</cudaapi>
+    
+    <keyconcepts level="basic">CUDA Dynamic Parallelism</keyconcepts>
+    <keyconcepts level="basic">Linear Algebra</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+	<library>cublas</library>
+	<library>cublas_device</library>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation></devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>kernels.cu</primary-file>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+
+    <nvcc-compiler file="kernels.cu"></nvcc-compiler>
+    <sm-arch>sm35</sm-arch>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>MersenneTwisterGP11213</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[This sample demonstrates the Mersenne Twister random number generator GP11213 in cuRAND.]]></description>
+    <project_path>7_CUDALibraries\MersenneTwisterGP11213</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>bin\win32\release\MersenneTwisterGP11213.exe</executable>
+    <minspec>SM 1.0</minspec>
+    <keywords>CUDA,CURAND,Monte-Carlo,random number generation, GSFR, Mersenne Twister</keywords>
+    <scope>1:CUDA Advanced Topics,3:Computational Finance</scope>
+    <featured_date>111109</featured_date>
+    <files>
+    </files>
+    
+    <keyconcepts level="basic">Computational Finance</keyconcepts>
+    <keyconcepts level="basic">CURAND Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+	<library>curand</library>
+
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows"></library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>MersenneTwister.cpp</primary-file>
+
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>GrabCut with NPP</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[CUDA Implementation of Rother et al. GrabCut approach using the 8 neighborhood NPP Graphcut primitive introduced in CUDA 4.1. (C. Rother, V. Kolmogorov, A. Blake. GrabCut: Interactive Foreground Extraction using Iterated Graph Cuts. ACM Transactions on Graphics (SIGGRAPH'04), 2004)]]></description>
+    <project_path>7_CUDALibraries\grabcutNPP</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>bin\win32\release\grabcutNPP.exe</executable>
+    <minspec>SM 1.1</minspec>
+    <keywords>CUDA,NPP,segmentation,graphcuts</keywords>
+    <scope>1:CUDA Basic Topics,1:Performance Strategies,2:Computer Vision</scope>
+    <featured_date>110913</featured_date>
+    <files>
+        <file>..\..\common\data\flower.ppm</file>
+        <file>..\..\common\data\flower_gold.png</file>
+        <file>..\..\common\data\person.ppm</file>
+        <file>..\..\common\data\sponge.ppm</file>
+    </files>
+    <qatests>
+        <qatest>-verify=flower_gold.png</qatest>
+    </qatests>
+    
+    <keyconcepts level="basic">Performance Strategies</keyconcepts>
+    <keyconcepts level="basic">Image Processing</keyconcepts>
+    <keyconcepts level="basic">NPP Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+    <library>GLU</library>
+    <library>GL</library>
+    <library os="macosx" framework="true">GLUT</library>
+    <library os="linux">X11</library>
+    <library os="linux">GLEW</library>
+    <library os="linux">glut</library>
+    <library>nppi</library>
+    <library>nppc</library>
+    <library>freeimage</library>
+ 
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows" arch="x86_64">../../common/lib/x64</library-path>
+    <library-path os="windows" arch="Win32">../../common/lib/Win32</library-path>
+    <library-path os="linux" arch="x86_64">../../common/lib/linux/x86_64</library-path>
+    <library-path os="linux" arch="i686">../../common/lib/linux/i686</library-path>
+    <library-path os="macosx">../../common/lib/darwin</library-path>
+    <library-path os="linux" arch="x86_64">../common/FreeImage/lib/linux/x86_64</library-path>
+    <library-path os="linux" arch="i686">../common/FreeImage/lib/linux/i686</library-path>
+    <library-path os="macosx">../common/FreeImage/lib/darwin</library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+    <include-path>../common/UtilNPP/</include-path>
+    <include-path>../common/FreeImage/include </include-path>
+
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    
+    <nvcc-compiler file="GrabcutGMM.cu"></nvcc-compiler>
+    <nvcc-compiler file="GrabcutHistogram.cu"></nvcc-compiler>
+    <nvcc-compiler file="GrabcutUtil.cu"></nvcc-compiler>
+    <sm-arch>sm11</sm-arch>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>GrabCutMain.cpp</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>Image Segmentation using Graphcuts with NPP</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[This sample that demonstrates how to perform image segmentation using the NPP GraphCut function.]]></description>
+    <project_path>7_CUDALibraries\imageSegmentationNPP</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>bin\win32\release\imageSegmentationNPP.exe</executable>
+    <minspec>SM 1.0</minspec>
+    <keywords>CUDA,NPP,segmentation,graphcuts</keywords>
+    <scope>1:CUDA Basic Topics,1:Performance Strategies,2:Computer Vision</scope>
+    <featured_date>110125</featured_date>
+    <files>
+        <file>..\..\common\data\person.txt</file>
+    </files>
+    
+    <keyconcepts level="basic">Image Processing</keyconcepts>
+    <keyconcepts level="basic">Performance Strategies</keyconcepts>
+    <keyconcepts level="basic">NPP Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+    <library>nppi</library>
+    <library>nppc</library>
+	<library>freeimage</library>
+
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows"></library-path>
+    <library-path os="linux" arch="x86_64">../common/FreeImage/lib/linux/x86_64</library-path>
+    <library-path os="linux" arch="i686">../common/FreeImage/lib/linux/i686</library-path>
+    <library-path os="macosx">../common/FreeImage/lib/darwin</library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+	<include-path>../common/UtilNPP/</include-path>
+	<include-path>../common/FreeImage/include </include-path>
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    
+    <nvcc-compiler file="GrabcutGMM.cu"></nvcc-compiler>
+    <sm-arch>sm10</sm-arch>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>GrabcutMain.cpp</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>Histogram Equalization with NPP</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[This SDK sample demonstrates how to use NPP for histogram equalization for image data.]]></description>
+    <project_path>7_CUDALibraries\histEqualizationNPP</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>bin\win32\release\histEqualizationNPP.exe</executable>
+    <minspec>SM 1.1</minspec>
+    <keywords>CUDA,NPP,Image Processing</keywords>
+    <scope>1:CUDA Basic Topics,2:Image Processing,2:Data Compression,1:Performance Strategies,2:Computer Vision</scope>
+    <featured_date>110125</featured_date>
+    <files>
+        <file>..\..\common\data\Lena.pgm</file>
+    </files>
+    
+    <keyconcepts level="basic">Image Processing</keyconcepts>
+    <keyconcepts level="basic">Performance Strategies</keyconcepts>
+    <keyconcepts level="basic">NPP Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+    <library>nppi</library>
+    <library>nppc</library>
+	<library>freeimage</library>
+
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows"></library-path>
+    <library-path os="linux" arch="x86_64">../common/FreeImage/lib/linux/x86_64</library-path>
+    <library-path os="linux" arch="i686">../common/FreeImage/lib/linux/i686</library-path>
+    <library-path os="macosx">../common/FreeImage/lib/darwin</library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+	<include-path>../common/UtilNPP/</include-path>
+	<include-path>../common/FreeImage/include </include-path>
+
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    
+    <sm-arch></sm-arch>
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>histEqualizationNPP.cpp</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>FreeImage and NPP Interopability</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[A simple SDK sample demonstrate how to use FreeImage library with NPP.]]></description>
+    <project_path>7_CUDALibraries\freeImageInteropNPP</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>bin\win32\release\freeImageInteropNPP.exe</executable>
+    <minspec>SM 1.0</minspec>
+    <keywords>CUDA,NPP,Image Processing</keywords>
+    <scope>1:CUDA Basic Topics,1:Performance Strategies,2:Image Processing</scope>
+    <featured_date>110125</featured_date>
+    <files>
+        <file>..\..\common\data\Lena.pgm</file>
+    </files>
+    
+    <keyconcepts level="basic">Performance Strategies</keyconcepts>
+    <keyconcepts level="basic">Image Processing</keyconcepts>
+    <keyconcepts level="basic">NPP Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+    <library>nppi</library>
+    <library>nppc</library>
+	<library>freeimage</library>
+
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows"></library-path>
+    <library-path os="linux" arch="x86_64">../common/FreeImage/lib/linux/x86_64</library-path>
+    <library-path os="linux" arch="i686">../common/FreeImage/lib/linux/i686</library-path>
+    <library-path os="macosx">../common/FreeImage/lib/darwin</library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+	<include-path>../common/UtilNPP/</include-path>
+	<include-path>../common/FreeImage/include </include-path>
+
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    
+    <sm-arch></sm-arch>
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>freeImageInteropNPP.cpp</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>Box Filter with NPP</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[A NPP SDK sample that demonstrates how to use NPP FilterBox function to perform a Box Filter.]]></description>
+    <project_path>7_CUDALibraries\boxFilterNPP</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>bin\win32\release\boxFilterNPP.exe</executable>
+    <minspec>SM 1.0</minspec>
+    <keywords>CUDA,NPP,Image Processing,box filter</keywords>
+    <scope>1:CUDA Basic Topics,1:Performance Strategies,2:Image Processing,2:Computer Vision</scope>
+    <featured_date>110125</featured_date>
+    <files>
+        <file>..\..\common\data\Lena.pgm</file>
+    </files>
+    
+    <keyconcepts level="basic">Performance Strategies</keyconcepts>
+    <keyconcepts level="basic">Image Processing</keyconcepts>
+    <keyconcepts level="basic">NPP Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+    <library>nppi</library>
+    <library>nppc</library>
+	<library>freeimage</library>
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows"></library-path>
+    <library-path os="linux" arch="x86_64">../common/FreeImage/lib/linux/x86_64</library-path>
+    <library-path os="linux" arch="i686">../common/FreeImage/lib/linux/i686</library-path>
+    <library-path os="macosx">../common/FreeImage/lib/darwin</library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+	<include-path>../common/UtilNPP/</include-path>
+	<include-path>../common/FreeImage/include </include-path>
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    
+    <sm-arch></sm-arch>
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>boxFilterNPP.cpp</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>Preconditioned Conjugate Gradient</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[This sample implements a preconditioned conjugate gradient solver on GPU
+ using CUBLAS and CUSPARSE library.]]></description>
+    <project_path>7_CUDALibraries\conjugateGradientPrecond</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>Bin\win32\release\conjugateGradientPrecond.exe</executable>
+    <minspec>SM 1.0</minspec>
+    <keywords>CUDA,CUBLAS,CUSPARSE,Sparse Matrix</keywords>
+    <scope>1:CUDA Advanced Topics,3:Linear Algebra</scope>
+    <featured_date>110110</featured_date>
+    <files>
+    </files>
+    <keyconcepts level="advanced">Linear Algebra</keyconcepts>
+    <keyconcepts level="advanced">CUBLAS Library</keyconcepts>
+    <keyconcepts level="advanced">CUSPARSE Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+	<library>cublas</library>
+	<library>cusparse </library>
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows"></library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    
+    <sm-arch></sm-arch>
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>main.cpp</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>Random Fog</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[This sample illustrates pseudo- and quasi- random numbers produced by CURAND.]]></description>
+    <project_path>7_CUDALibraries\randomFog</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>bin\win32\release\randomFog.exe</executable>
+    <minspec>SM 1.0</minspec>
+    <keywords>CUDA,CURAND,GPGPU,rng,prng,qrng,random number</keywords>
+    <scope>1:CUDA Basic Topics</scope>
+    <featured_date>100729</featured_date>
+    <files>
+        <file>data\ref_randomFog.bin</file>
+    </files>
+    <qatests>
+        <qatest>-qatest</qatest>
+    </qatests>
+    
+    <keyconcepts level="basic">3D Graphics</keyconcepts>
+    <keyconcepts level="basic">CURAND Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+    <library>curand</library>
+    <library>GLU</library>
+    <library>GL</library>
+    <library os="macosx" framework="true">GLUT</library>
+    <library os="linux">X11</library>
+    <library os="linux">GLEW</library>
+    <library os="linux">glut</library>
+
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows" arch="x86_64">../../common/lib/x64</library-path>
+    <library-path os="windows" arch="Win32">../../common/lib/Win32</library-path>
+    <library-path os="linux" arch="x86_64">../../common/lib/linux/x86_64</library-path>
+    <library-path os="linux" arch="i686">../../common/lib/linux/i686</library-path>
+    <library-path os="macosx">../../common/lib/darwin</library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>randomFog.cpp</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>Monte Carlo Single Asian Option</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[This sample uses Monte Carlo to simulate Single Asian Options using the NVIDIA CURAND library.]]></description>
+    <project_path>7_CUDALibraries\MC_SingleAsianOptionP</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>bin\Win32\Release\MC_SingleAsianOptionP.exe</executable>
+    <minspec>SM 1.0</minspec>
+    <keywords>CUDA,CURAND,GPGPU,Monte Carlo,rng,prng,qrng,random number</keywords>
+    <scope>1:CUDA Advanced Topics,3:Computational Finance</scope>
+    <featured_date>100729</featured_date>
+    <files>
+    </files>
+    <keyconcepts level="advanced">Random Number Generator</keyconcepts>
+    <keyconcepts level="advanced">Computational Finance</keyconcepts>
+    <keyconcepts level="advanced">CURAND Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+    <library>curand</library>
+
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows"></library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    <nvcc-compiler></nvcc-compiler>
+    <nvcc-compiler file="src\pricingengine.cu"></nvcc-compiler>
+    <sm-arch>sm10</sm-arch>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>src\main.cpp</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>Monte Carlo Estimation of Pi (batch QRNG)</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[This sample uses Monte Carlo simulation for Estimation of Pi (using batch QRNG).  This sample also uses the NVIDIA CURAND library.]]></description>
+    <project_path>7_CUDALibraries\MC_EstimatePiQ</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>bin\Win32\Release\MC_EstimatePiQ.exe</executable>
+    <minspec>SM 1.0</minspec>
+    <keywords>CUDA,CURAND,GPGPU,Monte Carlo,rng,prng,qrng,random number</keywords>
+    <scope>1:CUDA Advanced Topics</scope>
+    <featured_date>100729</featured_date>
+    <files>
+    </files>
+    <keyconcepts level="advanced">Random Number Generator</keyconcepts>
+    <keyconcepts level="advanced">Computational Finance</keyconcepts>
+    <keyconcepts level="advanced">CURAND Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+    <library>curand</library>
+
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows"></library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    <nvcc-compiler></nvcc-compiler>
+    <nvcc-compiler file="src\piestimator.cu"></nvcc-compiler>
+    <sm-arch>sm10</sm-arch>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>src\main.cpp</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>Monte Carlo Estimation of Pi (batch PRNG)</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[This sample uses Monte Carlo simulation for Estimation of Pi (using batch PRNG).  This sample also uses the NVIDIA CURAND library.]]></description>
+    <project_path>7_CUDALibraries\MC_EstimatePiP</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>bin\Win32\Release\MC_EstimatePiP.exe</executable>
+    <minspec>SM 1.0</minspec>
+    <keywords>CUDA,CURAND,GPGPU,Monte Carlo,rng,prng,qrng,random number</keywords>
+    <scope>1:CUDA Advanced Topics</scope>
+    <featured_date>100729</featured_date>
+    <files>
+    </files>
+    <keyconcepts level="advanced">Random Number Generator</keyconcepts>
+    <keyconcepts level="advanced">Computational Finance</keyconcepts>
+    <keyconcepts level="advanced">CURAND Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+    <library>curand</library>
+	
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows"></library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    <nvcc-compiler></nvcc-compiler>
+    <nvcc-compiler file="src\piestimator.cu"></nvcc-compiler>
+    <sm-arch>sm10</sm-arch>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>src\main.cpp</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>Monte Carlo Estimation of Pi (batch inline QRNG) </name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[This sample uses Monte Carlo simulation for Estimation of Pi (using batch inline QRNG).  This sample also uses the NVIDIA CURAND library.]]></description>
+    <project_path>7_CUDALibraries\MC_EstimatePiInlineQ</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>bin\Win32\Release\MC_EstimatePiInlineQ.exe</executable>
+    <minspec>SM 1.0</minspec>
+    <keywords>CUDA,CURAND,GPGPU,Monte Carlo,rng,prng,qrng,random number</keywords>
+    <scope>1:CUDA Advanced Topics</scope>
+    <featured_date>100729</featured_date>
+    <files>
+    </files>
+    <keyconcepts level="advanced">Random Number Generator</keyconcepts>
+    <keyconcepts level="advanced">Computational Finance</keyconcepts>
+    <keyconcepts level="advanced">CURAND Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+    <library>curand</library>
+	
+     <!-- Either absolute or relative to sample -->
+    <library-path os="windows"></library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    <nvcc-compiler></nvcc-compiler>
+    <nvcc-compiler file="src\piestimator.cu"></nvcc-compiler>
+    <sm-arch>sm10</sm-arch>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>src\main.cpp</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>Monte Carlo Estimation of Pi (inline PRNG)</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[This sample uses Monte Carlo simulation for Estimation of Pi (using inline PRNG).  This sample also uses the NVIDIA CURAND library.]]></description>
+    <project_path>7_CUDALibraries\MC_EstimatePiInlineP</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>bin\Win32\Release\MC_EstimatePiInlineP.exe</executable>
+    <minspec>SM 1.0</minspec>
+    <keywords>CUDA,CURAND,GPGPU,Monte Carlo,rng,prng,qrng,random number</keywords>
+    <scope>1:CUDA Advanced Topics</scope>
+    <featured_date>100729</featured_date>
+    <files>
+    </files>
+    <keyconcepts level="advanced">Random Number Generator</keyconcepts>
+    <keyconcepts level="advanced">Computational Finance</keyconcepts>
+    <keyconcepts level="advanced">CURAND Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+    <library>curand</library>
+
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows"></library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    <nvcc-compiler></nvcc-compiler>
+    <nvcc-compiler file="src\piestimator.cu"></nvcc-compiler>
+    <sm-arch>sm10</sm-arch>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>src\main.cpp</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>ConjugateGradient</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[This sample implements a conjugate gradient solver on GPU
+ using CUBLAS and CUSPARSE library.]]></description>
+    <project_path>7_CUDALibraries\conjugateGradient</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>Bin\win32\release\conjugateGradient.exe</executable>
+    <minspec>SM 1.0</minspec>
+    <keywords>CUDA,CUBLAS,CUSPARSE,Sparse Matrix</keywords>
+    <scope>1:CUDA Advanced Topics,3:Linear Algebra</scope>
+    <featured_date>100707</featured_date>
+    <files>
+    </files>
+    <keyconcepts level="advanced">Linear Algebra</keyconcepts>
+    <keyconcepts level="advanced">CUBLAS Library</keyconcepts>
+    <keyconcepts level="advanced">CUSPARSE Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+	<library>cublas</library>
+	<library>cusparse</library>
+
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows"></library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    
+    <sm-arch></sm-arch>
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>main.cpp</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>batchCUBLAS</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[A SDK sample that demonstrates how using batched CUBLAS API calls to improve overall performance.]]></description>
+    <project_path>7_CUDALibraries\batchCUBLAS</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>Bin\win32\release\batchCUBLAS.exe</executable>
+    <minspec>SM 1.0</minspec>
+    <keywords>CUBLAS,Linear Algebra</keywords>
+    <scope>1:CUDA Basic Topics,3:Linear Algebra</scope>
+    <featured_date>090401</featured_date>
+    <files>
+    </files>
+    
+    <keyconcepts level="basic">Linear Algebra</keyconcepts>
+    <keyconcepts level="basic">CUBLAS Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+    <library>cublas</library>
+	
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows"></library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>batchCUBLAS.cpp</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>Simple CUBLAS</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[Example of using CUBLAS using the new CUBLAS API interface available in CUDA 4.0.]]></description>
+    <project_path>7_CUDALibraries\simpleCUBLAS</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>Bin\win32\release\simpleCUBLAS.exe</executable>
+    <minspec>SM 1.0</minspec>
+    <keywords>CUDA,CUBLAS,Linear Algebra</keywords>
+    <scope>1:CUDA Basic Topics,3:Linear Algebra</scope>
+    <featured_date>080201</featured_date>
+    <files>
+    </files>
+    
+    <keyconcepts level="basic">Image Processing</keyconcepts>
+    <keyconcepts level="basic">CUBLAS Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+    <library>cublas</library>
+
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows"></library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    
+
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>simpleCUBLAS.cpp</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+<entry>
+    <name>Simple CUFFT</name>
+    <group>CUDALibraries</group>
+    <description><![CDATA[Example of using CUFFT. In this example, CUFFT is used to compute the 1D-convolution of some signal with some filter by transforming both into frequency domain, multiplying them together, and transforming the signal back to time domain.]]></description>
+    <project_path>7_CUDALibraries\simpleCUFFT</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+    <executable>Bin\win32\release\simpleCUFFT.exe</executable>
+    <minspec>SM 1.0</minspec>
+    <keywords>CUDA,CUFFT</keywords>
+    <scope>1:CUDA Basic Topics,2:Image Processing</scope>
+    <featured_date>080101</featured_date>
+    <files>
+    </files>
+    
+    <keyconcepts level="basic">Image Processing</keyconcepts>
+    <keyconcepts level="basic">CUFFT Library</keyconcepts>
+
+    <!-- *** Additional project definition information *** -->
+    <!-- Libraries that the project should be linked against. Document may contain any number of "libraries" elements. -->
+    <!-- Attributes "os" and "arch" are optional and may be used in any combination. -->
+    <!-- "framework" attribute will be ignored on platforms other then Mac OS X -->
+    <library>cufft</library>
+
+    <!-- Either absolute or relative to sample -->
+    <library-path os="windows"></library-path>
+
+    <!-- Either absolute or relative to sample -->
+    <include-path>./</include-path>
+    <include-path>../</include-path>
+    <include-path>../../common/inc</include-path>
+    
+    <!-- Can be either "separate" or "whole", omitting this element means that sample can be compiled either way -->
+    <devicecompilation>whole</devicecompilation>
+
+    <!-- These options will be passed to NVCC compiler as is and for all files -->
+    <nvcc-compiler>simpleCUFFT.cu</nvcc-compiler>
+    <sm-arch>sm10</sm-arch>
+    <sm-arch>sm20</sm-arch>
+    <sm-arch>sm30</sm-arch>
+	
+    <!-- One of "exe|dll|lib" (exe is default) -->
+    <type>exe</type>
+
+    <!-- By default IDE will open file "samplename.(cu|cpp) -->
+    <primary-file>simpleCUFFT.cu</primary-file>
+
+    <!-- Collection of [OS][:arch] tokens -->
+    <supported-env>linux:x86_64, linux:i686, windows7, macosx:x86_64, macosx:i686, :arm</supported-env>
+</entry>
+</entries>

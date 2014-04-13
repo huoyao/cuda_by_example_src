@@ -1,0 +1,167 @@
+<gpus>
+    <gpu chip="NV5">
+        <product>TNT2</product>
+        <product>TNT2 Pro</product>
+        <product>Vanta LT</product>
+        <product>Vanta A</product>
+    </gpu>
+    <gpu chip="NV10">
+        <product>GeForce 256</product>
+        <product>Quadro2</product>
+    </gpu>
+    <gpu chip="NV11">
+        <product>GeForce2 MX</product>
+        <product>GeForce2 Go</product>
+        <product>Quadro2 Go</product>
+    </gpu>
+    <gpu chip="NV15">
+        <product>GeForce2 GTS</product>
+    </gpu>
+    <gpu chip="NV16">
+        <product>GeForce2 Ultra</product>
+        <product>GeForce2 Ti</product>
+        <product>Quadro2 Pro</product>
+    </gpu>
+    <gpu chip="NV17">
+        <product>GeForce4 MX</product>
+    </gpu>
+    <gpu chip="NV17-M">
+        <product>GeForce4 4x0 Go</product>
+    </gpu>
+    <gpu chip="NV17-NVS">
+        <product>Quadro4 x00 NVS</product>
+    </gpu>
+    <gpu chip="NV17-GL">
+        <product>Quadro4 x00 XGL</product>
+    </gpu>
+
+    <gpu chip="NV18">
+        <product>GeForce4 MX</product>
+    </gpu>
+    <gpu chip="NV18-M">
+        <product>GeForce4 4x8 Go</product>
+    </gpu>
+    <gpu chip="NV18-NVS">
+        <product>Quadro4 280 NVS</product>
+    </gpu>
+    <gpu chip="NV18-GL">
+        <product>Quadro4 x80 XGL</product>
+    </gpu>
+    <gpu chip="NV20">
+        <product>GeForce3</product>
+    </gpu>
+    <gpu chip="NV20-GL">
+        <product>Quadro DCC</product>
+    </gpu>
+    <gpu chip="NV25">
+        <product>GeForce4 Ti 4200</product>
+        <product>GeForce4 Ti 4400</product>
+        <product>GeForce4 Ti 4600</product>
+    </gpu>
+    <gpu chip="NV25-GL">
+        <product>Quadro4 7xx XGL</product>
+        <product>Quadro4 900 XGL</product>
+    </gpu>
+    <gpu chip="NV28">
+        <product>GeForce4 Ti 4800</product>
+        <product>GeForce4 Ti 4200-8X</product>
+        <product>GeForce4 4200 Go</product>
+    </gpu>
+    <gpu chip="NV28-GL">
+        <product>Quadro4 980 XGL</product>
+        <product>Quadro4 Go700</product>
+    </gpu>
+    <gpu chip="NV30">
+        <product>GeForce FX 5800</product>
+    </gpu>
+    <gpu chip="NV30-GL">
+        <product>Quadro FX 1000</product>
+        <product>Quadro FX 2000</product>
+    </gpu>
+    <gpu chip="NV31">
+        <product>GeForce FX 5600</product>
+        <product>GeForce FX Go5600</product>
+    </gpu>
+    <gpu chip="NV31-GL">
+        <product>Quadro FX Go700</product>
+    </gpu>
+    <gpu chip="NV34">
+        <product>GeForce FX 5200</product>
+        <product>GeForce FX Go5100</product>
+        <product>GeForce FX Go5200</product>
+    </gpu>
+    <gpu chip="NV34-GL">
+        <product>Quadro FX 500</product>
+    </gpu>
+    <gpu chip="NV35">
+        <product>GeForce FX 5900</product>
+    </gpu>
+    <gpu chip="NV35-GL">
+        <product>Quadro FX 3000</product>
+    </gpu>
+    <gpu chip="NV36">
+        <product>GeForce FX 5700</product>
+        <product>GeForce FX Go57xx</product>
+    </gpu>
+    <gpu chip="NV38">
+        <product>GeForce FX 5950</product>
+    </gpu>
+    <gpu chip="NV40">
+        <product>GeForce 6800</product>
+    </gpu>
+    <gpu chip="NV40-GL">
+        <product>Quadro FX 4000</product>
+    </gpu>
+    <gpu chip="NV41-GL">
+        <product>Quadro FX 1400</product>
+    </gpu>
+    <gpu chip="NV42-GL">
+        <product>Quadro FX 3450</product>
+    </gpu>
+    <gpu chip="NV43">
+        <product>GeForce 6600</product>
+	<product>GeForce 6600 GT</product>
+    </gpu>
+    <gpu chip="NV43-GL">
+        <product>Quadro FX 540</product>
+    </gpu>
+    <gpu chip="NV44">
+        <product>GeForce 6200</product>
+    </gpu>
+    <gpu chip="NV45">
+        <product>GeForce 6800 Ultra</product>
+        <product>GeForce 6800 GT</product>
+    </gpu>
+    <gpu chip="NV45-GL">
+        <product>Quadro FX 4400</product>
+        <product>Quadro FX 3400</product>
+    </gpu>
+    <gpu chip="G70">
+        <product>GeForce 7800 GT</product>
+        <product>GeForce 7800 GS</product>
+        <product>GeForce 7800 GTX</product>
+        <product>GeForce 7800 GTX 512</product>
+    </gpu>
+    <gpu chip="G70-GL">
+        <product>Quadro FX 4500</product>
+    </gpu>
+    <gpu chip="G71">
+        <product>GeForce 7950 GX2</product>
+        <product>GeForce 7900 GTX</product>
+        <product>GeForce 7900 GT</product>
+        <product>GeForce 7900 GS</product>
+    </gpu>
+    <gpu chip="G72">
+        <product>GeForce 7300 GS</product>
+        <product>GeForce 7300 LE</product>
+    </gpu>
+    <gpu chip="G73">
+        <product>GeForce 7300 GT</product>
+        <product>GeForce 7600 GT</product>
+        <product>GeForce 7600 GS</product>
+    </gpu>
+    <gpu chip="G80">
+        <product>GeForce 8800 GTX</product>
+        <product>GeForce 8800 GTS</product>
+    </gpu>
+</gpus>

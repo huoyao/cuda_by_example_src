@@ -1,0 +1,642 @@
+<entries>
+<!-- Please documentation extry in this area. See docs_example.xml for examples. -->
+<!-- Files MUST be placed in doc\release folder to be released. Or it must reference a file already packaged in the SDK  -->
+<entry>
+    <name>CUDA Getting Started Guide (Microsoft Windows)</name>
+    <group>Docs</group>
+    <description><![CDATA[This guide will show you how to install and check the correct operation of the CUDA development tools in Windows.]]></description>
+	<!-- Files MUST be placed in doc\release folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUDA_Getting_Started_Windows.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,docs,getting started</keywords>
+    <scope>CUDA Documents,Getting Started</scope>
+    <featured_date>110522</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUDA Getting Started Guide (Linux)</name>
+    <group>Docs</group>
+    <description><![CDATA[This guide will show you how to install and check the correct operation of the CUDA development tools in Linux.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUDA_Getting_Started_Linux.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,docs,getting started</keywords>
+    <scope>CUDA Documents,Getting Started</scope>
+    <featured_date>110521</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUDA Getting Started Guide (Mac OS X)</name>
+    <group>Docs</group>
+    <description><![CDATA[This guide will show you how to install and check the correct operation of the CUDA development tools in Mac OS X.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in C\doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUDA_Getting_Started_Mac.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,docs,getting started</keywords>
+    <scope>CUDA Documents,Getting Started</scope>
+    <featured_date>110520</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUDA C Programming Guide</name>
+    <group>Docs</group>
+    <description><![CDATA[This is a detailed programming guide for CUDA C developers.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUDA_C_Programming_Guide.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,docs</keywords>
+    <scope>CUDA Documents,Programming Guide</scope>
+    <featured_date>110510</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUDA C Best Practices Guide</name>
+    <group>Docs</group>
+    <description><![CDATA[This is a manual to help developers obtain the best performance from the NVIDIA CUDA Architecture.  It presents established optimization techniques and explains coding metaphors and idioms that can greatly simplify progarmming for the CUDA architecture.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUDA_C_Best_Practices_Guide.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,docs</keywords>
+    <scope>CUDA Documents,Performance Guide</scope>
+    <featured_date>110509</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUDA Occupancy Calculator</name>
+    <group>Docs</group>
+    <description><![CDATA[The CUDA Occupancy Calculator allows you to compute the multiprocessor occupancy of a GPU by a given CUDA kernel.  This tool provides guidance for optimizing the best kernel launch configuration for the best possible occupancy for the GPU.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>tools\CUDA_Occupancy_Calculator.xls</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,docs</keywords>
+    <scope>CUDA Documents</scope>
+    <featured_date>110508</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUDA Developer Guide for Optimus Platforms</name>
+    <group>Docs</group>
+    <description><![CDATA[This document provides guidance to CUDA developers and explains how NVIDIA CUDA APIs can be used to query for GPU capabilities in Optimus systems. It is strongly recommended to follow these guidelines to ensure CUDA applications are compatible with all notebooks featuring Optimus.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\Optimus_Developer_Guide.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,docs</keywords>
+    <scope>CUDA Documents,Programming Guide</scope>
+    <featured_date>110507</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUDA Runtime API Reference Manual (PDF)</name>
+    <group>Docs</group>
+    <description><![CDATA[This is the CUDA Runtime API reference manual in PDF format.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUDA_Runtime_API.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,programming guide, documentation,docs</keywords>
+    <scope>CUDA Documents,Programming Guide</scope>
+    <featured_date>130415</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUDA Driver API Reference Manual (PDF)</name>
+    <group>Docs</group>
+    <description><![CDATA[This is the CUDA Driver API reference manual in PDF format.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUDA_Driver_API.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,programming guide, documentation,docs</keywords>
+    <scope>CUDA Documents,Programming Guide</scope>
+    <featured_date>130415</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>Floating Point and IEEE 754 Compliance for NVIDIA GPUs</name>
+    <group>Docs</group>
+    <description><![CDATA[A number of issues related to floating point accuracy and compliance are a frequent source of confusion on both CPUs and GPUs. The purpose of this white pa- per is to discuss the most common issues related to NVIDIA GPUs and to supplement the documentation in the CUDA C Programming Guide.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\Floating_Point_on_NVIDIA_GPU.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,docs,whitepaper</keywords>
+    <scope>CUDA Documents,DirectCompute Documents</scope>
+    <featured_date>110428</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>Incomplete-LU and Cholesky Preconditioned Iterative Methods Using CUSPARSE and CUBLAS</name>
+    <group>Docs</group>
+    <description><![CDATA[In this white paper we show how to use the CUSPARSE and CUBLAS libraries to achieve a 2× speedup over CPU in the incomplete-LU and Cholesky preconditioned iterative methods. We focus on the Bi-Conjugate Gradient Stabilized and Conjugate Gradient iterative methods, that can be used to solve large sparse nonsymmetric and symmetric positive defi- nite linear systems, respectively. Also, we comment on the parallel sparse triangular solve, which is an essential building block in these algorithms.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\Incomplete_LU_Cholesky.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,docs,whitepaper</keywords>
+    <scope>CUDA Documents,DirectCompute Documents</scope>
+    <featured_date>110427</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>The CUDA Compiler Driver (NVCC)</name>
+    <group>Docs</group>
+    <description><![CDATA[This CUDA compiler driver allows one to compile each CUDA source file, and several of these steps are subtly different for different modes of CUDA compilation (such as generation of device code repositories). It is the purpose of the CUDA compiler driver nvcc to hide the intricate details of CUDA compilation from developers."]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUDA_Compiler_Driver_NVCC.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,manual,documentation,docs</keywords>
+    <scope>CUDA Documents,Programming Guide</scope>
+    <featured_date>110425</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>PTX: Parallel Thread Execution ISA Version 3.2</name>
+    <group>Docs</group>
+    <description><![CDATA[This document describes PTX, a low-level parallel thread execution virtual machine and instruction set architecture (ISA). PTX exposes the GPU as a data-parallel computing device.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\ptx_isa_3.2.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,programming guide, documentation,docs</keywords>
+    <scope>CUDA Documents,Programming Guide</scope>
+    <featured_date>110424</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>Compute Command Line Profiler User Guide</name>
+    <group>Docs</group>
+    <description><![CDATA[The Compute Command Line Profiler is a command line based profiling tool that can be used to measure performance and find potential opportunities for CUDA and OpenCL optimizations, to achieve maximum performance from NVIDIA GPUs.  The Compute Command Line Profiler provides metrics in the form of plots and counter values presented in tables and as graphs. It tracks events with hardware counters on signals in the chip; this is explained in detail in the chapter entitled, "Compute Command Line Profiler Counters."]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\Compute_Command_Line_Profiler_User_Guide.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,opencl,profiling,documentation,docs</keywords>
+    <scope>CUDA Documents,Profiling Tools</scope>
+    <featured_date>110422</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUDA Kepler Compatibility Guide</name>
+    <group>Docs</group>
+    <description><![CDATA[The Kepler Compatibility Guide for CUDA Applications is intended to help developers ensure that their NVIDIA CUDA applications will run effectively on GPUs based on the NVIDIA Kepler Architecture. This document provides guidance to developers who are already familiar with programming in CUDA C/C++ and want to make sure that their software applications are compatible with Kepler.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\Kepler_Compatibility_Guide.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,docs</keywords>
+    <scope>CUDA Documents,Programming Guide</scope>
+    <featured_date>120430</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUDA Kepler Tuning Guide</name>
+    <group>Docs</group>
+    <description><![CDATA[An overview on how to tune applications for Kepler to further increase these speedups is provided. More details are available in the CUDA C Programming Guide (version 5.5 and later) as noted throughout the document..]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\Kepler_Tuning_Guide.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,docs</keywords>
+    <scope>CUDA Documents,Programming Guide</scope>
+    <featured_date>120429</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUBLAS Library User Guide</name>
+    <group>Docs</group>
+    <description><![CDATA[The CUBLAS library is an implementation of BLAS (Basic Linear Algebra Subprograms) on top of the NVIDIA CUDA runtime. It allows the user to access the computational resources of NVIDIA Graphical Processing Unit (GPU), but does not auto-parallelize across multiple GPUs.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUBLAS_Library.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,blas,docs</keywords>
+    <scope>CUDA Documents,Programming Guide</scope>
+    <featured_date>110410</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUFFT Library User Guide</name>
+    <group>Docs</group>
+    <description><![CDATA[This document describes CUFFT, the NVIDIA CUDA Fast Fourier Transform (FFT) library. The FFT is a divide-and-conquer algorithm for efficiently computing discrete Fourier transforms of complex or real-valued data sets, and it is one of the most important and widely used numerical algorithms, with applications that include computational physics and general signal processing. The CUFFT library provides a simple interface for computing parallel FFTs on an NVIDIA GPU, which allows users to leverage the floating-point power and parallelism of the GPU without having to develop a custom, GPUbased FFT implementation.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUFFT_Library.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,fft,docs</keywords>
+    <scope>CUDA Documents,Programming Guide</scope>
+    <featured_date>110409</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUSPARSE Library User Guide</name>
+    <group>Docs</group>
+    <description><![CDATA[The NVIDIA CUDA CUSPARSE library contains a set of basic linear algebra subroutines used for handling sparse matrices and is designed to be called from C or C++. These subroutines can be classified in four categories.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUSPARSE_Library.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,sparse matrix,docs</keywords>
+    <scope>CUDA Documents,Programming Guide</scope>
+    <featured_date>110408</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CURAND Library User Guide</name>
+    <group>Docs</group>
+    <description><![CDATA[The NVIDIA CURAND library provides facilities that focus on the simple and efficient generation of high-quality pseudorandom and quasirandom numbers.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CURAND_Library.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,docs</keywords>
+    <scope>CUDA Documents,Programming Guide</scope>
+    <featured_date>110407</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>NVIDIA Performance Primitives (NPP) Library User Guide</name>
+    <group>Docs</group>
+    <description><![CDATA[NVIDIA NPP is a library of functions for performing CUDA accelerated processing. The initial set of functionality in the library focuses on imaging and video processing and is widely applicable for developers in these areas. NPP will evolve over time to encompass more of the compute heavy tasks in a variety of problem domains. The NPP library is written to maximize flexibility, while maintaining high performance.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\NPP_Library.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,npp,docs</keywords>
+    <scope>CUDA Documents,Programming Guide</scope>
+    <featured_date>110406</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUDA Profiler Tools SDK Interface (CUPTI) User Guide</name>
+    <group>Docs</group>
+    <description><![CDATA[The CUDA Profiling Tools Interface (CUPTI) enables the creation of profiling and tracing tools that target CUDA applications. CUPTI provides four APIs, the Activity API, the Callback API, the Event API, and the Metric API. Using these APIs, you can develop profiling tools that give insight into the CPU and GPU behavior of CUDA applications. CUPTI is delivered as a dynamic library on all platforms supported by CUDA.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUPTI_Library.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,opencl,profiling,documentation,docs</keywords>
+    <scope>CUDA Documents,Profiling Tools</scope>
+    <featured_date>110405</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUDA Profiler Tools SDK Interface Release Notes</name>
+    <group>Docs</group>
+    <description><![CDATA[The CUDA Profiler Tools Interface Release Notes.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUPTI_Release_Notes.txt</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,opencl,profiling,documentation,docs</keywords>
+    <scope>CUDA Documents,Profiling Tools</scope>
+    <featured_date>110404</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>Thrust Quick Start Guide</name>
+    <group>Docs</group>
+    <description><![CDATA[Thrust is a C++ template library for CUDA based on the Standard Template Library (STL). Thrust allows you to implement high performance parallel applications with minimal programming effort through a high-level interface that is fully interoperable with CUDA C.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\Thrust_Quick_Start_Guide.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,thrust,parallel,docs</keywords>
+    <scope>CUDA Documents,Programming Guide</scope>
+    <featured_date>110403</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>NVIDIA CUDA H.264 Video Encoder Library User Guide</name>
+    <group>Docs</group>
+    <description><![CDATA[The NVIDIA CUDA H.264 Video Encoder is a library for performing CUDA accelerated video encoding. The functionality in the library takes raw YUV frames as input and generates NAL packets. This encoder supports up to various profiles up to High Profile @ Level 4.1.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUDA_Video_Encoder.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,video encode,h.264,documentation,docs</keywords>
+    <scope>CUDA Documents</scope>
+    <featured_date>110402</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>NVIDIA CUDA Video Decoder Library User Guide </name>
+    <group>Docs</group>
+    <description><![CDATA[The CUDA Video Decoder API gives developers access to hardware video decoding capabilities on NVIDIA GPU. The actual hardware decode can run on either Video Processor (VP) or CUDA hardware, depending on the hardware capabilities and the codecs. This API supports the following video stream formats for Linux and Windows platforms: MPEG-2, VC-1, and H.264 (AVCHD).]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUDA_Video_Decoder.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,video decode,h.264,documentation,docs</keywords>
+    <scope>CUDA Documents</scope>
+    <featured_date>110401</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUDA Samples (PDF)</name>
+    <group>Docs</group>
+    <description><![CDATA[CUDA Samples Getting Started, Guide to New Samples, and Release Notes (PDF).]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUDA_Samples.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,docs,getting started,release notes</keywords>
+    <scope>CUDA Documents,Release Notes</scope>
+    <featured_date>110331</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUDA Samples (TXT)</name>
+    <group>Docs</group>
+    <description><![CDATA[CUDA Samples Getting Started, Guide to New Samples, and Release Notes (TXT).]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\CUDA_Samples.txt</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,docs,getting started,release notes</keywords>
+    <scope>CUDA Documents,Release Notes</scope>
+    <featured_date>110331</featured_date>
+    <files>
+    </files>
+</entry>
+
+<entry>
+    <name>CUDA Samples End User License Agreement</name>
+    <group>Docs</group>
+    <description><![CDATA[This is the Software License Agreement for developers or licensees.]]></description>
+	<!-- Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <project_path>doc</project_path>
+    <screenshot_sm></screenshot_sm>
+    <screenshot_md></screenshot_md>
+    <screenshot_lg></screenshot_lg>
+    <userguide></userguide>
+    <video></video>
+    <whitepaper></whitepaper>
+	<!-- Use executable element to specify main documentation. Files MUST be placed in doc folder to be released. Or it must reference a file already packaged in the SDK  -->
+    <executable>doc\License.pdf</executable>
+    <minspec>GeForce 6</minspec>
+    <keywords>compute,documentation,docs</keywords>
+    <scope>CUDA Documents</scope>
+    <featured_date>110319</featured_date>
+    <files>
+    </files>
+</entry>
+
+</entries>
