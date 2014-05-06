@@ -123,7 +123,8 @@
 			<Tool
 				Name="Cudart Build Rule"
 				AdditionalOptions="-Xcompiler &quot;/wd 4819&quot; "
-				Arch3="30"
+				Arch1="0"
+				Arch3="0"
 			/>
 			<Tool
 				Name="VCXMLDataGeneratorTool"

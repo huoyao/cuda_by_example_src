@@ -200,7 +200,7 @@
 				AdditionalDependencies="cudart_static.lib cudadevrt.lib"
 				OutputFile="$(OutDir)/cdpSimplePrint.exe"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="$(CUDA_PATH)/lib/$(PlatformName);../../common/lib/$(PlatformName);"
+				AdditionalLibraryDirectories="$(CUDA_PATH_V5_5)/lib/$(PlatformName);../../common/lib/$(PlatformName);"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(OutDir)/cdpSimplePrint.pdb"
 				SubSystem="1"

@@ -143,7 +143,11 @@ int main(int argc, char **argv)
 
     printf("Total clocks = %d\n", (int)(maxEnd - minStart));
 
-    cudaDeviceReset();
-
+     cudaDeviceReset();
+    while(getchar()==27)
+    { 
+      return EXIT_SUCCESS;
+    }
     return EXIT_SUCCESS;
 }
+

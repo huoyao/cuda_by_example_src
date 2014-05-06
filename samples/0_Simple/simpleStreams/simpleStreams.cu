@@ -426,6 +426,9 @@ int main(int argc, char **argv)
     checkCudaErrors(cudaFree(d_c));
 
     checkCudaErrors(cudaDeviceReset());
-
+    while (getchar()==27)
+    {
+      return bResults ? EXIT_SUCCESS : EXIT_FAILURE;
+    }
     return bResults ? EXIT_SUCCESS : EXIT_FAILURE;
 }

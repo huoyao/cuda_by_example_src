@@ -202,7 +202,11 @@ int main(int argc, char **argv)
         printf("Test failed!\n");
         exit(EXIT_FAILURE);
     }
-
     printf("Test passed\n");
+    while(getchar()==27)
+    {
+      exit(EXIT_SUCCESS);
+    }
+    
     exit(EXIT_SUCCESS);
 }

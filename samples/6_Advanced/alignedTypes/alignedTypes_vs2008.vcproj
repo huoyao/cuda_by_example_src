@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="alignedTypes"
+	Name="alignedTypes_done"
 	ProjectGUID="{9AB8D10F-C4AC-42B9-BF78-F3F352EBDDC9}"
 	RootNamespace="alignedTypes"
 	Keyword="Win32Proj"
@@ -126,6 +126,8 @@
 			<Tool
 				Name="Cudart Build Rule"
 				AdditionalOptions="-Xcompiler &quot;/wd 4819&quot; "
+				NvccPath="$(CUDA_PATH_V5_5)\bin\nvcc.exe"
+				RequiredIncludes="$(CUDA_PATH_V5_5)\include"
 				Arch3="30"
 				TargetMachinePlatform="1"
 				Optimization="0"
@@ -167,7 +169,7 @@
 				AdditionalDependencies="cudart_static.lib"
 				OutputFile="../../bin/win64/$(ConfigurationName)/alignedTypes.exe"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="$(CUDA_PATH)/lib/$(PlatformName)"
+				AdditionalLibraryDirectories="$(CUDA_PATH_V5_5)/lib/$(PlatformName)"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(OutDir)/alignedTypes.pdb"
 				SubSystem="1"
@@ -403,8 +405,8 @@
 						Include="./;../../common/inc"
 						GPUDebugInfo="false"
 						Arch1="20"
-						Arch2="30"
-						Arch3="35"
+						Arch2="0"
+						Arch3="0"
 						ExtraNvccOptions="-gencode=arch=compute_10,code=\&quot;sm_10,compute_10\&quot;"
 						HostDebugInfo="false"
 						Optimization="0"
@@ -444,6 +446,10 @@
 				</FileConfiguration>
 			</File>
 		</Filter>
+		<File
+			RelativePath=".\ClassDiagram1.cd"
+			>
+		</File>
 	</Files>
 	<Globals>
 	</Globals>

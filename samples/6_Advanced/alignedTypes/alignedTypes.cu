@@ -73,7 +73,7 @@ typedef struct __align__(8)
     unsigned int l, a;
 } LA32;
 
-typedef struct __align__(16)
+typedef struct __align__(8)
 {
     unsigned int r, g, b;
 } RGB32;
@@ -316,7 +316,7 @@ int main(int argc, char **argv)
     nTotalFailures += runTest<LA32>(8, MemorySize);
 
     printf("RGB32...\n");
-    nTotalFailures += runTest<RGB32>(12, MemorySize);
+    nTotalFailures += runTest<RGB32>(8, MemorySize);
 
     printf("RGBA32...\n");
     nTotalFailures += runTest<RGBA32>(16, MemorySize);
@@ -342,5 +342,9 @@ int main(int argc, char **argv)
     }
 
     printf("Test passed\n");
+    while (getchar()==27)
+    {
+      exit(EXIT_SUCCESS);
+    }
     exit(EXIT_SUCCESS);
 }

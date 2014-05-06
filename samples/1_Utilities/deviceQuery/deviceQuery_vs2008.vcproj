@@ -127,6 +127,7 @@
 			<Tool
 				Name="Cudart Build Rule"
 				AdditionalOptions="-Xcompiler &quot;/wd 4819&quot; "
+				RequiredIncludes="$(CUDA_PATH_V5_5)\include;$(CUDA_PATH)\inc;"
 				Arch3="30"
 			/>
 			<Tool
@@ -142,7 +143,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="$(CUDA_PATH)/include;./;../../common/inc"
+				AdditionalIncludeDirectories="&quot;$(CUDA_PATH)/inc&quot;;&quot;$(CUDA_PATH_V5_5)/include&quot;;./;../../common/inc"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -166,7 +167,7 @@
 				AdditionalDependencies="cuda.lib cudart_static.lib "
 				OutputFile="../../bin/win64/$(ConfigurationName)/deviceQuery.exe"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="$(CUDA_PATH)/lib/$(PlatformName);../../common/lib;"
+				AdditionalLibraryDirectories="&quot;$(CUDA_PATH_V5_5)/lib/$(PlatformName)&quot;;../../common/lib"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(OutDir)/deviceQuery.pdb"
 				SubSystem="1"

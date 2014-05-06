@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="concurrentKernels"
+	Name="concurrentKernels_done"
 	ProjectGUID="{CF1168E2-7455-4F2D-842E-396B5C579E8D}"
 	RootNamespace="concurrentKernels"
 	Keyword="Win32Proj"
@@ -125,6 +125,8 @@
 			<Tool
 				Name="Cudart Build Rule"
 				AdditionalOptions="-Xcompiler &quot;/wd 4819&quot; "
+				NvccPath="$(CUDA_PATH_V5_5)\bin\nvcc.exe"
+				RequiredIncludes="$(CUDA_PATH_V5_5)\include"
 				Arch3="30"
 				TargetMachinePlatform="1"
 				Optimization="0"
@@ -167,7 +169,7 @@
 				AdditionalDependencies="cudart_static.lib  "
 				OutputFile="../../bin/win64/$(ConfigurationName)/concurrentKernels.exe"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="$(CUDA_PATH)/lib/$(PlatformName);../../common/lib;"
+				AdditionalLibraryDirectories="$(CUDA_PATH_V5_5)/lib/$(PlatformName);../../common/lib;"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(OutDir)/concurrentKernels.pdb"
 				SubSystem="1"

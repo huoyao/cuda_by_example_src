@@ -55,6 +55,7 @@ void containerFill(Container<int> **g_container)
     if (threadIdx.x == 0)
     {
         (*g_container)->push(blockIdx.x);
+        printf("%d\n",blockIdx.x);
     }
 }
 
@@ -69,10 +70,12 @@ void containerConsume(Container<int> **g_container, int *d_result)
     if ((*g_container)->pop(v))
     {
         d_result[idx] = v;
+        printf("%d\n",v);
     }
     else
     {
         d_result[idx] = -1;
+        printf("-1\n");
     }
 }
 
@@ -235,6 +238,8 @@ bool testContainer(Container<int> **d_container, int blocks, int threads)
     cudaMalloc(&d_result, blocks*threads*sizeof(int));
 
     containerFill<<<blocks,threads>>>(d_container);
+    cudaThreadSynchronize();
+    printf("####################\n");
     containerConsume<<<blocks,threads>>>(d_container, d_result);
     containerDelete<<<1,1>>>(d_container);
     checkCudaErrors(cudaDeviceSynchronize());
@@ -320,8 +325,8 @@ int main(int argc, char **argv)
     int test_passed = 0;
 
     printf(" > Container = Vector test ");
-    vectorCreate<<<1,1>>>(d_container, 128 * 128);
-    bTest = testContainer(d_container, 128, 128);
+    vectorCreate<<<1,1>>>(d_container, 2 * 2);
+    bTest = testContainer(d_container, 2, 2);
     printf(bTest ? "OK\n\n" : "NOT OK\n\n");
     test_passed += (bTest ? 1 : 0);
 
@@ -340,5 +345,9 @@ int main(int argc, char **argv)
     printf("Test Summary: %d/3 succesfully run\n", test_passed);
 
     cudaDeviceReset();
+    while (getchar()==27)
+    {
+      exit(test_passed==3 ? EXIT_SUCCESS : EXIT_FAILURE);
+    }
     exit(test_passed==3 ? EXIT_SUCCESS : EXIT_FAILURE);
 };
