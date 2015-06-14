@@ -1,7 +1,7 @@
 cuda_by_example_src
 ===================
 
-cuda_by_example src by meself 
+cuda_by_example src by myself 
 
 vs2010 cuda5.5 must be installed
 
