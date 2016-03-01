@@ -102,5 +102,6 @@ int main(){
   printf("%d\n",c);
   cudaFree(resultc);
   getchar();
+  cudaThreadExit();
   return 0;
 }

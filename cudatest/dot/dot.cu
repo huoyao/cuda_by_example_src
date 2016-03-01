@@ -36,11 +36,13 @@ __global__ void dot(float *a,float *b,float *c)
   if (caheidex==0)
   {
     c[blockIdx.x]=cahe[0];
+    printf("suc");
   }
 }
 
 int main(void)
 {
+  cudaDeviceReset();
   float *a,*b,*c;
   double sum=0.;
   float *dev_a,*dev_b,*dev_c;
@@ -74,9 +76,7 @@ int main(void)
   free(a);
   free(b);
   free(c);
-  if (getchar()==27)
-  {
-    exit(0);
-  }
+  cudaDeviceReset();
+  cudaThreadExit();
   return 0;
 }
